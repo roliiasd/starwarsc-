@@ -1,0 +1,38 @@
+﻿<Window x:Class="StarWars.SzereplokWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StarWars"
+        mc:Ignorable="d"
+        Icon="./images/star_wars.ico"
+        WindowStartupLocation="CenterScreen"
+        Background="Black"
+        BorderBrush="Yellow"
+        BorderThickness="5"
+        Title="SzereplokWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox>
+            <StackPanel Margin="10 25">
+                <Expander Header="Neme" FontSize="20" Foreground="White" Margin="5">
+                    <ComboBox Name="neme"/>
+                </Expander>
+                <Expander Header="Faj" FontSize="20" Foreground="White" Margin="5">
+                    <ComboBox Name="faj"/>
+                </Expander>
+                <Expander Header="Név" FontSize="20" Foreground="White" Margin="5">
+                    <TextBox Name="nev"/>
+                </Expander>
+                <Button Name="gomb" Content="Alkalmaz" Background="Yellow" Padding="5" Margin="5 20" FontWeight="Bold"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Column="1">
+            <ListBox Name="lista" Margin="10 25" FontSize="20" Foreground="White" BorderBrush="Transparent" Background="Black"/>
+        </GroupBox>
+    </Grid>
+</Window>
